@@ -1,7 +1,6 @@
 #!/usr/bin/python3.1
 
 # This plugin let you learn tool
-
 ##################################################
 # If you want to add modules, please check this :
 # - If the "def <tool>" is defined (1)

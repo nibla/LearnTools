@@ -1,5 +1,7 @@
 #!/usr/bin/python3.1
 
+# This plugin is the SSH module
+
 import modulessh
 import sys
 import subprocess
