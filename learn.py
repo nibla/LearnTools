@@ -6,9 +6,9 @@
 # - If the "def <tool>" is defined (1)
 # - If the "tool == " is defined (2)
 
-import modulessh
-import moduleother
 import sys
+sys.path.append("modules/")
+import modulessh
 import subprocess
 import os
 import re
@@ -49,9 +49,6 @@ else:
     if tool == "ssh":
         readytogo()
         modulessh.ssh()
-    elif tool == "other":
-        readytogo()
-        moduleother.other()
     else:
         print("Please, choose a tool !")
         sys.exit(1)
