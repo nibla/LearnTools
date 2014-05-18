@@ -50,5 +50,5 @@ else:
         readytogo()
         modulessh.ssh()
     else:
-        print("Please, choose a tool !")
+        print("This tool, doesn't exist (yet). Please choose another one.")
         sys.exit(1)

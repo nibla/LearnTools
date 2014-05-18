@@ -35,7 +35,7 @@ def ssh():
                 process.communicate()
                 exit_code = process.wait()
             else:
-                checkit = input("Good ! Let's check if it's running now: type 'check it' to verify !\n\n")
+                checkit = input("4. Good ! Let's check if it's running now: type 'check it' to verify !\n\n")
                 while checkit != "check it":
                     checkit = input("Type 'check it' to verify.\n")
                 else:
@@ -51,7 +51,7 @@ def ssh():
                     exit_code = process3.wait()
                 while exit_code != 0:
                     time.sleep(1)
-                    retry = input("Please, start the daemon ssh ! Type 'check it' to recheck.")
+                    retry = input("5. Please, start the daemon ssh ! Type 'check it' to recheck.")
                     checkdaemonrunning1 = "ps aux"
                     checkdaemonrunning2 = "grep sbin/sshd"
                     checkdaemonrunning3 = "grep -v grep"
@@ -63,4 +63,15 @@ def ssh():
                     process3.communicate()
                     exit_code = process3.wait()
                 else:
-                    print("Good ! You're ready to use SSH !")
+                    print("Good ! Let's continue !\n\n")
+                    print("This is the syntax of the ssh command : 'ssh <user>@<host> [-p <port>]'\n\n")
+                    print("6. If you're ready, let's initialize the connection to the host 'localhost' with user 'root'.\n")
+                    checkit = input("When you're connected, please, create an empty file in '/var/tmp/' with name 'mytest.txt' and type 'check it' when it's ok !\n")
+                    while checkit != "check it":
+                        checkit = input("Please, type 'check it'\n")
+                    else:
+                        while not os.path.exists("/var/tmp/mytest.txt"):
+                            time.sleep(1)
+                            retry = input("Please, create the file !\n")
+                        else:
+                            print("Good one !")
