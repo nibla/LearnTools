@@ -10,3 +10,10 @@ Coming soon...
  * Grep, Sed, Awk, Cut
  * Processus
  * Bash
+
+How to add module
+=================
+
+If you want to add module, you have to
+ * Add the condition in the learn.py
+ * Add your module.py in the modules/ directory

@@ -2,9 +2,6 @@
 
 # This plugin let you learn tool
 ##################################################
-# If you want to add modules, please check this :
-# - If the "def <tool>" is defined (1)
-# - If the "tool == " is defined (2)
 
 import sys
 sys.path.append("modules/")
@@ -15,12 +12,6 @@ import re
 import shlex
 import time
 from subprocess import Popen, PIPE
-
-#####
-#   #
-# 1 #
-#   #
-#####
 
 def readytogo():
     answer = input("You're going to learn " + tool.upper() + ", are you ready to begin ? (yes/no)\n")
@@ -37,7 +28,7 @@ def readytogo():
                         
 #####
 #   #
-# 2 #
+# 1 #
 #   #
 #####
 
